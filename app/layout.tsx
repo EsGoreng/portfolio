@@ -27,10 +27,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#fbfefb] dark:bg-[#0d1321] text-black dark:text-white transition-colors duration-500 relative min-h-screen`}
       >
-        <LightRays color="rgba(247, 141, 167, 1)" length="100vh" count={5} />
-        {children}
+        <div className="fixed inset-0 z-0 pointer-events-none">
+          <LightRays color="var(--ray-color)" length="100vh" count={5} />
+        </div>
+
+        <div className="relative z-10">{children}</div>
+
         <MainDock />
       </body>
     </html>
