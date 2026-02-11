@@ -1,6 +1,5 @@
 import { client } from './client'
 
-// ===== PROFILE QUERIES =====
 export async function getProfile() {
   return client.fetch(`
     *[_type == "profile"][0] {
@@ -34,7 +33,6 @@ export async function getProfile() {
   `)
 }
 
-// ===== PROJECT QUERIES =====
 export async function getAllProjects(includeUnpublished = false) {
   const filter = includeUnpublished ? '' : '&& publishedAt < now()'
   
@@ -171,7 +169,6 @@ export async function getProjectsByCategory(categorySlug: string) {
   `, { categorySlug })
 }
 
-// ===== SKILL QUERIES =====
 export async function getAllSkills() {
   return client.fetch(`
     *[_type == "skill"] | order(category asc, title asc) {
@@ -208,7 +205,6 @@ export async function getSkillsByCategory(category: string) {
   `, { category })
 }
 
-// ===== EXPERIENCE QUERIES =====
 export async function getAllExperiences() {
   return client.fetch(`
     *[_type == "experience"] | order(startDate desc) {
@@ -233,7 +229,6 @@ export async function getAllExperiences() {
   `)
 }
 
-// ===== EDUCATION QUERIES =====
 export async function getAllEducation() {
   return client.fetch(`
     *[_type == "education"] | order(startDate desc) {
@@ -252,7 +247,6 @@ export async function getAllEducation() {
   `)
 }
 
-// ===== CATEGORY QUERIES =====
 export async function getAllCategories() {
   return client.fetch(`
     *[_type == "category"] | order(title asc) {

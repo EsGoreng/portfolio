@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import { MainDock } from "./components/dock";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { LightRays } from "@/components/ui/light-rays";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +29,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <LightRays color="rgba(247, 141, 167, 1)" length="100vh" count={5} />
         {children}
+        <MainDock />
       </body>
     </html>
   );
