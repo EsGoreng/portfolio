@@ -1,17 +1,13 @@
 import type { Metadata } from "next";
 import { MainDock } from "./components/dock";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
+import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 import { LightRays } from "@/components/ui/light-rays";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const dmSans = Montserrat({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -27,15 +23,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#fbfefb] dark:bg-[#0d1321] text-black dark:text-white transition-colors duration-500 relative min-h-screen`}
+        className={`${dmSans.className} antialiased bg-background text-black dark:text-white transition-colors duration-500 relative min-h-screen overflow-hidden`}
       >
         <div className="fixed inset-0 z-0 pointer-events-none">
           <LightRays color="var(--ray-color)" length="100vh" count={5} />
         </div>
 
-        <div className="relative z-10">{children}</div>
+        <div className="font-sans relative z-10 h-screen w-full">
+          {children}
+        </div>
 
         <MainDock />
+        <ProgressiveBlur height="30%" position="bottom" />
       </body>
     </html>
   );
