@@ -18,9 +18,10 @@ export default function Main() {
             textAutoHide={false}
             enableSpotlight={true}
             enableMagnetism={false}
+            enableStars={false}
             glowColor="var(--bento-glow)"
             particleColor="var(--bento-glow)"
-            className="grid-cols-1 md:grid-cols-2 lg:grid-cols-5 lg:grid-rows-4"
+            className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 grid-flow-dense auto-rows-[minmax(180px,auto)]"
           />
         </div>
       </ReactLenis>
