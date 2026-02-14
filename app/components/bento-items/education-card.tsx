@@ -1,21 +1,40 @@
-import { TelkomLogo } from ".././icons/TelkomLogo";
-
 export const EducationCard = () => {
   return (
-    <div className="flex h-full flex-col p-8">
-      <TelkomLogo className="h-40 text-(--ray-color) w-full mb-6" />
-      <div className="flex flex-col gap-4">
-        <div className="relative pl-4 border-l border-white/20 dark:border-white/10">
-          <div className="absolute -left-1.25 top-1.5 h-2 w-2 rounded-full bg-purple-500"></div>
-          <h4 className="font-semibold text-sm">Universitas Telkom</h4>
-          <p className="text-xs opacity-70">S1 Sistem Informasi</p>
-          <p className="text-[10px] opacity-50 mt-1">2024 - 2028</p>
-        </div>
-        <div className="relative pl-4 border-l border-white/20 dark:border-white/10">
-          <div className="absolute -left-1.25 top-1.5 h-2 w-2 rounded-full bg-gray-400"></div>
-          <h4 className="font-semibold text-sm">MAN Darussalam</h4>
-          <p className="text-xs opacity-70">Social Science</p>
-          <p className="text-[10px] opacity-50 mt-1">2021 - 2024</p>
+    <div className="flex h-full w-full flex-col overflow-hidden relative">
+      <h3 className="absolute z-25 left-6 top-6 flex items-center gap-2 text-2xl font-semibold tracking-tighter">
+        Education
+      </h3>
+
+      <div className="relative flex-1 min-h-0">
+        <div
+          className="absolute inset-x-0 top-0 z-20 h-20 backdrop-blur-xs"
+          style={{
+            maskImage:
+              "linear-gradient(to bottom, black 0%, black 25%, rgba(0,0,0,0.5) 60%, transparent 100%)",
+            WebkitMaskImage:
+              "linear-gradient(to bottom, black 0%, black 25%, rgba(0,0,0,0.5) 60%, transparent 100%)",
+          }}
+        />
+        <div
+          className="h-[34vh] overflow-y-auto px-6 scrollbar-hide"
+          data-lenis-prevent
+        >
+          <div className="flex flex-col gap-3 pt-18 pb-8 font-light">
+            <div className="border-b border-border/50 pb-2">
+              <h4 className="font-semibold text-sm  tracking-tighter">
+                Universitas Telkom
+              </h4>
+              <p className="text-xs opacity-70">S1 Sistem Informasi</p>
+              <p className="text-[10px] opacity-50 mt-1">2024 - 2028</p>
+            </div>
+            <div className="border-b border-border/50 pb-2">
+              <h4 className="font-semibold text-sm  tracking-tighter">
+                MAN Darussalam
+              </h4>
+              <p className="text-xs opacity-70">Social Science</p>
+              <p className="text-[10px] opacity-50 mt-1">2021 - 2024</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

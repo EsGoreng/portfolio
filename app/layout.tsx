@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { MainDock } from "./components/dock";
-import { Montserrat } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 import { LightRays } from "@/components/ui/light-rays";
 
-const dmSans = Montserrat({
+const font = Poppins({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${dmSans.className} antialiased bg-background text-black dark:text-white transition-colors duration-500 relative min-h-screen overflow-hidden`}
+        className={`${font.className} antialiased bg-background text-black dark:text-white transition-colors duration-500 relative min-h-screen overflow-hidden`}
       >
         <div className="fixed inset-0 z-0 pointer-events-none">
           <LightRays color="var(--ray-color)" length="100vh" count={5} />

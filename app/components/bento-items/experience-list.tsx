@@ -1,7 +1,5 @@
 "use client";
 
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 import {
   Dialog,
   DialogTrigger,
@@ -12,7 +10,7 @@ import {
   DialogDescription,
   DialogContainer,
 } from "@/components/uilayouts/linear-modal";
-import { Plus, Briefcase, Calendar, MapPin, X } from "lucide-react";
+import { Plus, Calendar, MapPin, X } from "lucide-react";
 
 export interface ExperienceItem {
   _id: string;
@@ -121,8 +119,8 @@ export const ExperienceList = ({
 }: ExperienceListProps) => {
   return (
     <div className="flex h-full w-full flex-col overflow-hidden relative">
-      <h3 className="absolute z-25 left-6 top-6 flex items-center gap-2 text-lg font-bold">
-        Work Experience
+      <h3 className="absolute z-25 left-6 top-6 flex items-center gap-2 text-2xl font-semibold tracking-tighter">
+        Experience
       </h3>
 
       <div className="relative flex-1 min-h-0">
@@ -137,7 +135,7 @@ export const ExperienceList = ({
         />
 
         <div
-          className="h-full overflow-y-auto px-6 scrollbar-hide"
+          className="h-[70vh] overflow-y-auto px-6 scrollbar-hide"
           data-lenis-prevent
         >
           <div className="flex flex-col gap-3 pt-18 pb-8">

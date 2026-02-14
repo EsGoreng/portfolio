@@ -1,5 +1,5 @@
 import { ProfileCard } from "../components/bento-items/profile-card";
-import { VelocityScrollCard } from "../components/bento-items/velocity-scroll-card";
+import { AboutCard } from "../components/bento-items/about-card";
 import { HobbiesList } from "../components/bento-items/hobbies-list";
 import { ExperienceList } from "../components/bento-items/experience-list";
 import { EducationCard } from "../components/bento-items/education-card";
@@ -25,14 +25,14 @@ export const bentoItems: BentoItem[] = [
   },
   {
     className: size.wide,
-    children: <VelocityScrollCard />,
+    children: <AboutCard />,
   },
   {
     className: size.normal,
     children: <HobbiesList />,
   },
   {
-    className: `${size.big} max-h-[70vh]`,
+    className: size.big,
     children: <ExperienceList />,
   },
   {

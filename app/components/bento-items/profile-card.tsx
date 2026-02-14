@@ -2,7 +2,7 @@ import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 
 export const ProfileCard = () => {
   return (
-    <div className="group relative h-full w-full overflow-hidden rounded-4xl bg-gray-900">
+    <div className="group relative h-full w-full overflow-hidden">
       <img
         src="https://images.unsplash.com/photo-1745870297558-367a83462926?q=80&w=687&auto=format&fit=crop"
         alt="Profile"

@@ -1,8 +1,8 @@
-export const AchievementCard = () => {
+export const AboutCard = () => {
   return (
     <div className="flex h-full w-full flex-col overflow-hidden relative">
       <h3 className="absolute z-25 left-6 top-6 flex items-center gap-2 text-2xl font-semibold tracking-tighter">
-        Achievment
+        About
       </h3>
 
       <div className="relative flex-1 min-h-0">
@@ -18,7 +18,16 @@ export const AchievementCard = () => {
         <div
           className="h-[34vh] overflow-y-auto px-6 scrollbar-hide"
           data-lenis-prevent
-        ></div>
+        >
+          <div className="flex flex-col gap-3 pt-18 pb-8 font-light">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis eum
+              cupiditate similique debitis explicabo dolor libero? Eius,
+              recusandae sequi? Nemo delectus officia ab natus, ut omnis
+              explicabo incidunt sint maxime.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
