@@ -6,9 +6,6 @@ import { bentoItems } from "@/lib/constants";
 export default function ProfileSection() {
   return (
     <div className="w-full max-w-7xl mx-auto px-4 pt-24 pb-40">
-      <div className="relative w-full mb-8 text-center">
-        <h2 className="text-7xl font-bold mb-4">Profile</h2>
-      </div>
       <MagicBento
         items={bentoItems}
         textAutoHide={false}

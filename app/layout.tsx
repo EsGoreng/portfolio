@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { MainDock } from "@/components/PortfolioDock";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import { SmoothCursor } from "@/components/ui/smooth-cursor";
 import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 import { LightRays } from "@/components/ui/light-rays";
 
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body
         className={`${font.className} antialiased bg-background text-black dark:text-white transition-colors duration-500 relative min-h-screen overflow-hidden`}
       >
+        <SmoothCursor />
         <div className="fixed inset-0 z-0 pointer-events-none">
           <LightRays color="var(--ray-color)" length="100vh" count={5} />
         </div>
