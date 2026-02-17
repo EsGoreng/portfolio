@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { MainDock } from "./components/dock";
+import { MainDock } from "@/components/PortfolioDock";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import { ProgressiveBlur } from "@/components/ui/progressive-blur";

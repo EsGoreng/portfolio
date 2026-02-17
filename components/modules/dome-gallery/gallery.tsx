@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useRef, useCallback } from "react";
 import { useGesture } from "@use-gesture/react";
 
-import "./DomeGallery.css";
-import { ProgressiveBlur } from "./progressive-blur";
+import "./gallery.css";
+import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 import {
   ImageItem,
   ItemDef,
@@ -13,7 +13,7 @@ import {
   getDataNumber,
   buildItems,
   computeItemBaseRotation,
-} from "./dome-utils";
+} from "./utils";
 
 type DomeGalleryProps = {
   images?: ImageItem[];

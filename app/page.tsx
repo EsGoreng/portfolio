@@ -1,9 +1,9 @@
 "use client";
 
-import MagicBento from "./components/magic-bento";
+import MagicBento from "@/components/modules/bento-grid/bento-wrapper";
 import { ReactLenis } from "lenis/react";
-import { bentoItems } from "./data/items";
-import DomeGallery from "../components/ui/DomeGallery";
+import { bentoItems } from "@/lib/constants";
+import DomeGallery from "@/components/modules/dome-gallery/gallery";
 
 export default function Main() {
   return (

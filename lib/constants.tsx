@@ -1,10 +1,10 @@
-import { ProfileCard } from "../components/bento-items/profile-card";
-import { AboutCard } from "../components/bento-items/about-card";
-import { Spinning } from "../components/bento-items/spinning";
-import { ExperienceList } from "../components/bento-items/experience-list";
-import { EducationCard } from "../components/bento-items/education-card";
-import { RandomImage } from "../components/bento-items/random-image";
-import { AchievementCard } from "../components/bento-items/achievement-card";
+import { ProfileCard } from "@/components/modules/bento-grid/profile-card";
+import { AboutCard } from "@/components/modules/bento-grid/about-card";
+import { Spinning } from "@/components/modules/bento-grid/spinning";
+import { ExperienceList } from "@/components/modules/bento-grid/experience-list";
+import { EducationCard } from "@/components/modules/bento-grid/education-card";
+import { RandomImage } from "@/components/modules/bento-grid/random-image";
+import { AchievementCard } from "@/components/modules/bento-grid/achievement-card";
 
 export interface BentoItem {
   className: string;
