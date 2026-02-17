@@ -1,4 +1,4 @@
-export const ReadingList = () => {
+export const RandomImage = () => {
   return (
     <div className="group relative h-full w-full overflow-hidden">
       <img

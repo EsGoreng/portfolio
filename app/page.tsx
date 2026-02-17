@@ -3,6 +3,7 @@
 import MagicBento from "./components/magic-bento";
 import { ReactLenis } from "lenis/react";
 import { bentoItems } from "./data/items";
+import DomeGallery from "../components/ui/DomeGallery";
 
 export default function Main() {
   return (
@@ -13,6 +14,9 @@ export default function Main() {
         className="relative z-10 w-full h-screen overflow-y-auto scrollbar-hide"
       >
         <div className="w-full max-w-7xl mx-auto px-4 pt-24 pb-40">
+          <div className="relative w-full mb-8 text-center">
+            <h2 className="text-6xl font-bold mb-4">Profile</h2>
+          </div>
           <MagicBento
             items={bentoItems}
             textAutoHide={false}
@@ -23,6 +27,22 @@ export default function Main() {
             particleColor="var(--bento-glow)"
             className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 grid-flow-dense auto-rows-[minmax(180px,auto)]"
           />
+        </div>
+
+        <div className="w-full max-w-7xl mx-auto px-4 pb-40">
+          <div className="relative w-full mb-8 text-center">
+            <h2 className="text-6xl font-bold mb-4">Gallery</h2>
+          </div>
+          <div className="relative w-full h-150 md:h-200 rounded-2xl overflow-hidden border border-white/10 bg-background/30 backdrop-blur-md">
+            <DomeGallery
+              fit={0.8}
+              minRadius={500}
+              maxVerticalRotationDeg={5}
+              segments={34}
+              dragDampening={2}
+              grayscale={false}
+            />
+          </div>
         </div>
       </ReactLenis>
     </div>

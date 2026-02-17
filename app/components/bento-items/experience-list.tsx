@@ -9,7 +9,7 @@ import {
   DialogClose,
   DialogDescription,
   DialogContainer,
-} from "@/components/uilayouts/linear-modal";
+} from "@/components/ui/linear-modal";
 import { Plus, Calendar, MapPin, X } from "lucide-react";
 
 export interface ExperienceItem {

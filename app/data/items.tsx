@@ -1,9 +1,9 @@
 import { ProfileCard } from "../components/bento-items/profile-card";
 import { AboutCard } from "../components/bento-items/about-card";
-import { HobbiesList } from "../components/bento-items/hobbies-list";
+import { Spinning } from "../components/bento-items/spinning";
 import { ExperienceList } from "../components/bento-items/experience-list";
 import { EducationCard } from "../components/bento-items/education-card";
-import { ReadingList } from "../components/bento-items/reading-list";
+import { RandomImage } from "../components/bento-items/random-image";
 import { AchievementCard } from "../components/bento-items/achievement-card";
 
 export interface BentoItem {
@@ -20,7 +20,7 @@ const size = {
 
 export const bentoItems: BentoItem[] = [
   {
-    className: `${size.normal} min-h-[300px]`,
+    className: size.normal,
     children: <ProfileCard />,
   },
   {
@@ -29,7 +29,7 @@ export const bentoItems: BentoItem[] = [
   },
   {
     className: size.normal,
-    children: <HobbiesList />,
+    children: <Spinning />,
   },
   {
     className: size.big,
@@ -41,7 +41,7 @@ export const bentoItems: BentoItem[] = [
   },
   {
     className: size.normal,
-    children: <ReadingList />,
+    children: <RandomImage />,
   },
   {
     className: size.wide,
