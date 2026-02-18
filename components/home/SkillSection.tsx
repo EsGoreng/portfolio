@@ -2,9 +2,9 @@
 import { JSX, useRef, useEffect, useState } from "react";
 import { useScroll } from "motion/react";
 import { projects } from "@/lib/constants";
-import Card from "./PortfolioCard";
+import Card from "./SkillCard";
 
-export default function PortfolioSection(): JSX.Element {
+export default function SkillSection(): JSX.Element {
   const container = useRef(null);
 
   const [scrollContainer, setScrollContainer] = useState<

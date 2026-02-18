@@ -1,7 +1,5 @@
 "use client";
 
-import React from "react";
-
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import { Dock, DockIcon } from "@/components/ui/dock";
 import { Separator } from "radix-ui";
@@ -12,13 +10,16 @@ import {
   TooltipProvider,
 } from "@/components/ui/tooltip";
 
-import { Icons, IconProps } from "@/components/ui/icons";
+import { Icons } from "@/components/ui/icons";
 
 export function MainDock() {
   return (
     <div className="fixed bottom-15 left-0 z-50 flex w-full items-center justify-around">
       <TooltipProvider>
-        <Dock direction="middle">
+        <Dock
+          direction="middle"
+          className="z-50 pointer-events-auto relative h-14 p-2 w-fit mx-auto flex gap-2 border bg-card/50 backdrop-blur-3xl shadow-[0_0_10px_3px] shadow-primary/5"
+        >
           <DockIcon>
             <Tooltip>
               <TooltipTrigger asChild>

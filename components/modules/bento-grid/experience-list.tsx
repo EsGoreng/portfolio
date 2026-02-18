@@ -145,7 +145,7 @@ export const ExperienceList = ({
                 transition={{ duration: 0.3, ease: "easeInOut" }}
               >
                 <DialogTrigger>
-                  <div className="group relative flex flex-col gap-2 rounded-lg border border-border/50 bg-card/50 p-4 hover:bg-accent/50 transition-colors cursor-pointer w-full text-left">
+                  <div className="group relative flex flex-col p-4 rounded-lg hover:bg-accent/50 transition-colors cursor-pointer w-full text-left">
                     <div className="flex w-full items-start justify-between gap-2">
                       <div className="flex flex-col gap-1">
                         <DialogTitle className="text-sm font-bold text-foreground">
