@@ -50,7 +50,7 @@ const Card: React.FC<CardProps> = ({
           scale,
           top: `calc(-5vh + ${i * 25}px)`,
         }}
-        className="relative flex flex-col md:flex-row gap-6 w-full max-w-5xl rounded-3xl p-8 md:p-12 overflow-hidden shadow-xl min-h-[500px] origin-top"
+        className="relative flex flex-col md:flex-row gap-6 w-full max-w-5xl rounded-3xl p-8 md:p-12 overflow-hidden shadow-xl min-h-125 origin-top"
       >
         <div className="flex flex-col justify-between w-full md:w-1/2 h-full z-10">
           <div>
