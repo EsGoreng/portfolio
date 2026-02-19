@@ -118,7 +118,7 @@ export const ExperienceList = ({
   data = DUMMY_EXPERIENCES,
 }: ExperienceListProps) => {
   return (
-    <div className="flex h-full w-full flex-col overflow-hidden relative">
+    <div className="flex h-full w-full flex-col overflow-hidden relative backdrop-blur-sm bg-white/40 dark:bg-white/5 ">
       <h3 className="absolute z-25 left-6 top-6 flex items-center gap-2 text-2xl font-semibold tracking-tighter">
         Experience
       </h3>

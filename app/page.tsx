@@ -18,6 +18,9 @@ export default function Main() {
         <CarouselSection />
         <SkillSection />
         <BlogSection />
+        <div className="h-300 flex items-center justify-center">
+          Hello World
+        </div>
       </ReactLenis>
     </div>
   );

@@ -1,7 +1,7 @@
 "use client";
 
 import MagicBento from "@/components/modules/bento-grid/bento-wrapper";
-import { bentoItems } from "@/lib/constants";
+import { profileItems } from "@/lib/profile-items";
 
 export default function ProfileSection() {
   return (
@@ -11,7 +11,7 @@ export default function ProfileSection() {
       </div>
       <div className="w-full max-w-7xl mx-auto px-4 pt-8 pb-4">
         <MagicBento
-          items={bentoItems}
+          items={profileItems}
           textAutoHide={false}
           enableSpotlight={false}
           enableMagnetism={false}

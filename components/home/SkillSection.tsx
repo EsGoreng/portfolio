@@ -1,10 +1,10 @@
 "use client";
 import { JSX, useRef, useEffect, useState } from "react";
 import { useScroll } from "motion/react";
-import { projects } from "@/lib/constants";
+import { skills } from "@/lib/skill-items";
 import Card from "./SkillCard";
 
-export default function SkillSection(): JSX.Element {
+export default function skillection(): JSX.Element {
   const container = useRef(null);
 
   const [scrollContainer, setScrollContainer] = useState<
@@ -36,20 +36,20 @@ export default function SkillSection(): JSX.Element {
 
   return (
     <section ref={container}>
-      {projects.map((project, i) => {
-        const targetScale = 1 - (projects.length - i) * 0.05;
+      {skills.map((skill, i) => {
+        const targetScale = 1 - (skills.length - i) * 0.05;
 
         return (
           <Card
-            key={project.title}
+            key={skill.title}
             i={i}
-            url={project.link}
-            src={project.src}
-            title={project.title}
-            color={project.color}
-            description={project.description}
+            url={skill.link}
+            src={skill.src}
+            title={skill.title}
+            color={skill.color}
+            description={skill.description}
             progress={scrollYProgress}
-            range={[i * (1 / projects.length), 1]}
+            range={[i * (1 / skills.length), 1]}
             targetScale={targetScale}
             scrollContainer={scrollContainer}
           />

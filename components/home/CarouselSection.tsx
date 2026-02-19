@@ -13,11 +13,10 @@ function index() {
   const OPTIONS: EmblaOptionsType = { loop: true };
   return (
     <BlurFade delay={0.5} inView>
-      {/* wrap carousel in a mask container to fade the left/right edges */}
-      <div className="relative overflow-hidden mask-[linear-gradient(to_right,transparent_0,black_128px,black_calc(100%-128px),transparent_100%)]">
+      <div className="relative overflow-hidden ">
         <Carousel
           options={OPTIONS}
-          className="max-w-7xl px-4 mx-auto"
+          className="max-w-7xl mx-auto mask-[linear-gradient(to_right,transparent_0,black_128px,black_calc(100%-128px),transparent_100%)]"
           plugins={[
             Autoplay({
               playOnInit: true,
@@ -27,22 +26,18 @@ function index() {
             }),
           ]}
         >
-          <SliderContainer className="gap-2">
+          <SliderContainer className="gap-4 px-4">
             <Slider className="w-full">
-              <div className="bg-card/50 backdrop-blur-lg rounded-xl h-100 w-full"></div>{" "}
-              {/* Red background with rounded corners */}
+              <div className="bg-white/40 dark:bg-white/5 backdrop-blur-lg rounded-xl h-100 w-full "></div>
             </Slider>
             <Slider className="w-full">
-              <div className="bg-card/50 backdrop-blur-lg rounded-xl h-100 w-full"></div>{" "}
-              {/* Blue background with rounded corners */}
+              <div className="bg-white/40 dark:bg-white/5 backdrop-blur-lg rounded-xl h-100 w-full"></div>
             </Slider>
             <Slider className="w-full">
-              <div className="bg-card/50 backdrop-blur-lg rounded-xl h-100 w-full"></div>{" "}
-              {/* Green background with rounded corners */}
+              <div className="bg-white/40 dark:bg-white/5 backdrop-blur-lg rounded-xl h-100 w-full"></div>
             </Slider>
             <Slider className="w-full">
-              <div className="bg-card/50 backdrop-blur-lg rounded-xl h-100 w-full"></div>{" "}
-              {/* Yellow background with rounded corners */}
+              <div className="bg-white/40 dark:bg-white/5 backdrop-blur-lg rounded-xl h-100 w-full"></div>
             </Slider>
           </SliderContainer>
           <div className="flex justify-center py-4">

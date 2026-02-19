@@ -85,7 +85,7 @@ const Card: React.FC<CardProps> = ({
           </div>
         </div>
 
-        <div className="relative w-full md:w-1/2 h-64 md:h-auto rounded-2xl overflow-hidden shadow-inner">
+        <div className="relative w-full md:w-1/2 h-64 md:h-128 rounded-2xl overflow-hidden shadow-inner">
           <motion.div className="w-full h-full" style={{ scale: imageScale }}>
             <img src={url} alt={title} className="w-full h-full object-cover" />
           </motion.div>

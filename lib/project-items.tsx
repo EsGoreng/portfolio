@@ -1,54 +1,3 @@
-import { ProfileCard } from "@/components/modules/bento-grid/profile-card";
-import { AboutCard } from "@/components/modules/bento-grid/about-card";
-import { Spinning } from "@/components/modules/bento-grid/spinning";
-import { ExperienceList } from "@/components/modules/bento-grid/experience-list";
-import { EducationCard } from "@/components/modules/bento-grid/education-card";
-import { RandomImage } from "@/components/modules/bento-grid/random-image";
-import { AchievementCard } from "@/components/modules/bento-grid/achievement-card";
-
-export interface BentoItem {
-  className: string;
-  children: React.ReactNode;
-}
-
-const size = {
-  normal: "col-span-1 row-span-1",
-  wide: "col-span-1 md:col-span-2 row-span-1",
-  tall: "col-span-1 row-span-2",
-  big: "col-span-1 md:col-span-2 row-span-2",
-};
-
-export const bentoItems: BentoItem[] = [
-  {
-    className: size.normal,
-    children: <ProfileCard />,
-  },
-  {
-    className: size.wide,
-    children: <AboutCard />,
-  },
-  {
-    className: size.normal,
-    children: <Spinning />,
-  },
-  {
-    className: size.big,
-    children: <ExperienceList />,
-  },
-  {
-    className: size.normal,
-    children: <EducationCard />,
-  },
-  {
-    className: size.normal,
-    children: <RandomImage />,
-  },
-  {
-    className: size.wide,
-    children: <AchievementCard />,
-  },
-];
-
 export interface Project {
   title: string;
   description: string;
@@ -89,6 +38,38 @@ export const projects: Project[] = [
     src: "finance.jpg",
     link: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2626&auto=format&fit=crop",
     color: "#B62429",
+  },
+  {
+    title: "Health & Fitness App",
+    description:
+      "Achieve your fitness goals with personalized workout plans and nutrition tracking. Connect with a community of fitness enthusiasts and stay motivated.",
+    src: "fitness.jpg",
+    link: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2670&auto=format&fit=crop",
+    color: "#88A28D",
+  },
+  {
+    title: "Health & Fitness App",
+    description:
+      "Achieve your fitness goals with personalized workout plans and nutrition tracking. Connect with a community of fitness enthusiasts and stay motivated.",
+    src: "fitness.jpg",
+    link: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2670&auto=format&fit=crop",
+    color: "#88A28D",
+  },
+  {
+    title: "Health & Fitness App",
+    description:
+      "Achieve your fitness goals with personalized workout plans and nutrition tracking. Connect with a community of fitness enthusiasts and stay motivated.",
+    src: "fitness.jpg",
+    link: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2670&auto=format&fit=crop",
+    color: "#88A28D",
+  },
+  {
+    title: "Health & Fitness App",
+    description:
+      "Achieve your fitness goals with personalized workout plans and nutrition tracking. Connect with a community of fitness enthusiasts and stay motivated.",
+    src: "fitness.jpg",
+    link: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2670&auto=format&fit=crop",
+    color: "#88A28D",
   },
   {
     title: "Health & Fitness App",
