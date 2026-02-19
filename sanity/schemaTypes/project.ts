@@ -15,88 +15,47 @@ export const project = defineType({
     }),
     defineField({
       name: 'slug',
-      title: 'Slug',
+      title: 'Slug (URL)',
       type: 'slug',
+      description: 'Klik "Generate" untuk membuat URL otomatis dari judul',
       options: {
         source: 'title',
+        maxLength: 96,
       },
       validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'description',
-      title: 'Deskripsi',
+      title: 'Deskripsi Singkat (Card)',
       type: 'text',
-      validation: (rule) => rule.required().max(500),
+      rows: 3,
+      validation: (rule) => rule.required().max(200),
     }),
     defineField({
       name: 'longDescription',
-      title: 'Deskripsi Lengkap',
+      title: 'Konten Detail Proyek',
       type: 'array',
-      of: [defineArrayMember({ type: 'block' })],
-      description: 'Penjelasan detail tentang proyek',
+      of: [{ type: 'block' }, { type: 'image' }],
+      description: 'Penjelasan detail yang akan muncul di halaman detail',
     }),
     defineField({
       name: 'image',
-      title: 'Gambar Proyek',
+      title: 'Cover Image',
       type: 'image',
-      options: {
-        hotspot: true,
-      },
+      options: { hotspot: true },
       validation: (rule) => rule.required(),
-    }),
-    defineField({
-      name: 'images',
-      title: 'Galeri Proyek',
-      type: 'array',
-      of: [
-        defineArrayMember({
-          type: 'image',
-          options: {
-            hotspot: true,
-          },
-        }),
-      ],
-      description: 'Tambahkan lebih banyak gambar untuk galeri proyek',
     }),
     defineField({
       name: 'technologies',
-      title: 'Teknologi yang Digunakan',
+      title: 'Teknologi',
       type: 'array',
-      of: [
-        defineArrayMember({
-          type: 'string',
-        }),
-      ],
-      validation: (rule) => rule.required(),
-      description: 'Contoh: React, Node.js, GraphQL, dll',
+      of: [{ type: 'string' }],
     }),
     defineField({
-      name: 'categories',
-      title: 'Kategori',
-      type: 'array',
-      of: [
-        defineArrayMember({
-          type: 'reference',
-          to: [{ type: 'category' }],
-        }),
-      ],
-    }),
-    defineField({
-      name: 'duration',
-      title: 'Durasi Proyek',
-      type: 'object',
-      fields: [
-        defineField({
-          name: 'startDate',
-          title: 'Tanggal Mulai',
-          type: 'datetime',
-        }),
-        defineField({
-          name: 'endDate',
-          title: 'Tanggal Selesai',
-          type: 'datetime',
-        }),
-      ],
+      name: 'publishedAt',
+      title: 'Tanggal Publikasi',
+      type: 'datetime',
+      initialValue: () => new Date().toISOString(),
     }),
     defineField({
       name: 'links',
@@ -136,11 +95,12 @@ export const project = defineType({
       initialValue: false,
       description: 'Tandai untuk menampilkan di halaman utama',
     }),
-    defineField({
-      name: 'publishedAt',
-      title: 'Tanggal Publikasi',
-      type: 'datetime',
-      initialValue: () => new Date().toISOString(),
-    }),
   ],
+  preview: {
+    select: {
+      title: 'title',
+      author: 'project.slug.current',
+      media: 'image',
+    },
+  },
 })

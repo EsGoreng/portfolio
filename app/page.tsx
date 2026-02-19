@@ -1,27 +1,19 @@
-"use client";
-
-import { ReactLenis } from "lenis/react";
+// page.tsx (Sekarang jadi Server Component)
+import ScrollWrapper from "@/components/wrappers/ScrollWrapper"; // Import wrapper yang baru dibuat
 import ProfileSection from "@/components/home/ProfileSection";
 import SkillSection from "@/components/home/SkillSection";
 import CarouselSection from "@/components/home/CarouselSection";
 import BlogSection from "@/components/home/BlogSection";
+import CTA from "@/components/home/CTASection";
 
 export default function Main() {
   return (
-    <div className="relative flex min-h-screen w-full justify-center items-center overflow-x-hidden">
-      <ReactLenis
-        root={false}
-        options={{ lerp: 0.1, duration: 1.5, smoothWheel: true }}
-        className="relative z-10 w-full h-screen overflow-y-auto scrollbar-hide"
-      >
-        <ProfileSection />
-        <CarouselSection />
-        <SkillSection />
-        <BlogSection />
-        <div className="h-300 flex items-center justify-center">
-          Hello World
-        </div>
-      </ReactLenis>
-    </div>
+    <ScrollWrapper>
+      <ProfileSection />
+      <CarouselSection />
+      <SkillSection />
+      <BlogSection />
+      <CTA />
+    </ScrollWrapper>
   );
 }

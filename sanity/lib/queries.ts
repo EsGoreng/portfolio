@@ -99,7 +99,7 @@ export async function getFeaturedProjects() {
 }
 
 export async function getProjectBySlug(slug: string) {
-  return client.fetch(`
+  const query = `
     *[_type == "project" && slug.current == $slug][0] {
       _id,
       title,
@@ -143,7 +143,9 @@ export async function getProjectBySlug(slug: string) {
       featured,
       publishedAt
     }
-  `, { slug })
+  `;
+
+  return client.fetch(query, { slug : slug});
 }
 
 export async function getProjectsByCategory(categorySlug: string) {

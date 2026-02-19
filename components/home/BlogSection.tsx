@@ -1,9 +1,12 @@
 import MagicBento from "@/components/modules/bento-grid/bento-wrapper";
 import { ProjectCard } from "@/components/modules/blog-grid/blog-card";
-import { projects } from "@/lib/project-items";
+import { Project } from "@/lib/project-items";
+import { getAllProjects } from "@/sanity/lib/queries";
 
-export default function BlogSection() {
-  const blogItems = projects.map((project) => {
+export default async function BlogSection() {
+  const projects = await getAllProjects();
+
+  const blogItems = projects.map((project: Project) => {
     return {
       children: <ProjectCard project={project} />,
     };
@@ -12,7 +15,7 @@ export default function BlogSection() {
   return (
     <>
       <div className="flex justify-center items-center min-h-screen w-full">
-        <h1 className="text-7xl tracking-tighter">Work</h1>
+        <h1 className="text-7xl tracking-tighter">My Project</h1>
       </div>
       <div className="w-full max-w-7xl mx-auto px-4 pt-8 pb-4">
         <MagicBento

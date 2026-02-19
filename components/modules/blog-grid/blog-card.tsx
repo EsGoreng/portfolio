@@ -7,6 +7,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import Link from "next/link"; // IMPOR INI
+import Image from "next/image";
 import type { Project } from "@/lib/project-items";
 
 interface ProjectCardProps {
@@ -15,25 +17,31 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <Card className="relative mx-auto w-full pt-0 bg-white/40 dark:bg-white/5 backdrop-blur-lg border border-border rounded-4xl">
-      {project.src && (
-        <img
-          src={project.link}
-          alt={project.title}
-          className="relative aspect-video rounded-t-[25px] z-30 w-full  object-cover brightness-60 grayscale dark:brightness-40"
-        />
+    <Card className="relative flex flex-col mx-auto w-full pt-0 bg-white/40 dark:bg-white/5 backdrop-blur-lg border border-border rounded-4xl h-full">
+      {project.image?.asset?.url && (
+        <div className="relative aspect-video w-full overflow-hidden rounded-t-[25px]">
+          <Image
+            src={project.image.asset.url}
+            alt={project.title}
+            fill
+            className="object-cover brightness-90 hover:brightness-100 transition-all duration-300"
+          />
+        </div>
       )}
+
       <CardHeader>
-        <CardTitle>{project.title}</CardTitle>
+        <CardTitle className="line-clamp-1">{project.title}</CardTitle>
       </CardHeader>
-      <CardContent>
-        <CardDescription>{project.description}</CardDescription>
+
+      <CardContent className="flex-grow">
+        <CardDescription className="line-clamp-3">
+          {project.description}
+        </CardDescription>
       </CardContent>
+
       <CardFooter>
-        <Button asChild>
-          <a target="_blank" rel="noopener noreferrer">
-            View Detail
-          </a>
+        <Button asChild className="w-full">
+          <Link href={`/projects/${project.slug.current}`}>View Detail</Link>
         </Button>
       </CardFooter>
     </Card>
